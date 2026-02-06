@@ -9,19 +9,28 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
+      home: const HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        title: const Text('APK TEST'),
         backgroundColor: Colors.black,
-        body: Center(
-          child: Text(
-            'APK BUILD OK 🚀🔥',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 26,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+      ),
+      body: const Center(
+        child: Text(
+          'FUNCIONANDO 🚀',
+          style: TextStyle(color: Colors.white, fontSize: 24),
         ),
       ),
     );
